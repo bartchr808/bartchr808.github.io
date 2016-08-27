@@ -1,0 +1,295 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type='application/javascript' src='../JS/fastclick.js'></script>
+
+
+
+
+
+    <!--Bunch of metas for dropdown menu to work-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Main jQuery and Bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+-->
+    <script type="application/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css" />
+
+
+
+    <!--Import jQuery probably pointless-->
+    <script src="../jquery-3.0.0.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <!--Import animate.css-->
+    <link rel="stylesheet" type="text/css" href="../CSS/animate.css" media="screen">
+
+    <!--Parallax Scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--    <script src="/path/to/parallax.js"></script>-->
+
+    <!--Type Animation-->
+    <script src="../typed.js-master/js/typed.js"></script>
+
+    <!--Font Awesome-->
+    <script src="https://use.fontawesome.com/20baeaba27.js"></script>
+
+    <!--Jquery Interactive Background-->
+    <script type="text/javascript" src="../jquery.interactive_bg.js"></script>
+
+    <!--Import Personal CSS-->
+
+    <link rel="stylesheet" media="screen and (min-width: 767px)" href="../CSS/Personal.css" />
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="../CSS/PersonalMobile.css" />
+
+    <!--    <link rel="stylesheet" type="text/css" href="../CSS/Personal.css" media="screen" />-->
+
+    <!--Import Personal Javascript-->
+    <script type="text/javascript" src="../JS/projects.js"></script>
+
+    <!--Import CSS Animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="../jQuery-Carousel-Image-Gallery-with-Cover-Flow-Effect-jqcarousel/src/jqcarousel.js"></script>
+
+    <title>Bart C Projects</title>
+    <link rel="icon" href="../Pictures/bartLogo.png">
+
+</head>
+
+
+
+<body class="container-fluid" style="background-color: white">
+    <!--Header-->
+    <div id="navBar" class="animated" style="z-index: 1000">
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-1">
+                <p id="navBarText"><a id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="skills" style="color: #0058f1" class="navLinks" href="../HTML/skills.html">Skills</a></p>
+            </div>
+            <div class="col-sm-2">
+                <a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="projects" class="navLinks" href="../HTML/projects.html">Projects</a></p>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p>
+            </div>
+            <div class="col-sm-1">
+            </div>
+        </div>
+    </div>
+    <!--Header-->
+    <!--
+    <div id="navBar" class="animated" style="z-index: 1000">
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-1">
+                <p id="navBarText"><a id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="skills" style="color: #0058f1" class="navLinks" href="../HTML/skills.html">Skills</a></p>
+            </div>
+            <div class="col-sm-2">
+                <a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="projects" class="navLinks" href="../HTML/projects.html">Projects</a></p>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p>
+            </div>
+            <div class="col-sm-1">
+            </div>
+        </div>
+    </div>
+-->
+
+    <div id="windShad" class=""></div>
+    <div id="contWind" class="skillText"></div>
+
+    <!--Heading-->
+    <div id="projectsHeader">
+        <h1 style="padding: 10% 0 10% 0; text-align: center; font-size: 60px">Projects</h1>
+    </div>
+    <!--
+<body id="body" class="container-fluid" style="background-color: white">
+    <div id="navBar" class="animated">
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-1">
+                <p id="navBarText"><a id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html">Skills</a></p>
+            </div>
+            <div class="col-sm-2">
+                <a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="projects" style="color: #0058f1" class="navLinks" href="../HTML/projects.html">Projects</a></p>
+            </div>
+            <div class="col-sm-2">
+                <p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p>
+            </div>
+            <div class="col-sm-1">
+            </div>
+        </div>
+    </div>
+
+    <div id="windShad" class=""></div>
+    <div id="contWind" class="skillText"></div>
+
+    <div id="projectsHeader">
+        <h1 style="padding: 10% 0 10% 0; text-align: center; font-size: 60px">Projects</h1>
+    </div>
+-->
+
+
+    <div id="iconRowBox">
+        <div id="center">
+            <!--Window Opener-->
+            <!--        <div class="col-sm-2">-->
+            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0%">
+                <div class="tile">
+                    <div class="front">
+                        <img src="../Pictures/piWindowCrop.jpg" style="height: 100%; width: 100%">
+                    </div>
+                    <div class="back">
+                        <div class="projTextWrapper">
+                            <p class="projText">
+                                <h4 style="text-align: center; padding-top: 2%">Raspberry Pi Window Opener</h4>
+                                <ul>
+                                    <li>API to gather weather info.</li>
+                                    <li>depending on temperatures and whether it is raining, window is kept closed/opened or the motor closes/opens the window.</li>
+                                    <li>Had to understand the way stepper motor works and how to program stepper motors due to the lack of documentation included with the stepper motor.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--        </div>-->
+            <!--Window Opener-->
+            <!--        <div class="col-sm-2">-->
+            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="front">
+                    <div id="projBack1">
+                        <img src="../Pictures/phoneIcon.png" style="height: 300px; width; 300px; opacity: 0.7">
+                    </div>
+                </div>
+            </div>
+
+            <!--Window Opener-->
+            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="front">
+                    <div id="projBack2">
+                        <img src="../Pictures/desktopIcon.png" style="height: 300px; width; 300px; opacity: 0.7">
+                    </div>
+                </div>
+            </div>
+
+            <!--Window Opener-->
+            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="tile">
+                    <div class="front">
+                        <img src="../Pictures/iconAnimationsFusedCrop.jpg" style="height: 100%; width: 100%">
+                    </div>
+                    <div class="back">
+                        <div class="projTextWrapper">
+                            <p class="projText">
+                                <h4 style="text-align: center; padding-top: 2%">Icon Animations <u>(IN PROGRESS)</u>
+                                        <a class="projLinks" href="https://github.com/bartchr808/Icon-Animations"><i style="font-size: 30px" class="fa fa-github"></i></a>
+                                </h4>
+                                <ul>
+                                    <li>Use CSS to create shapes and colours of clouds, sun, etc.</li>
+                                    <li>JS Jquery to animate parts of icons (e.g. fade out and shift left).</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Window Opener-->
+            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="front">
+                    <div id="projBack3">
+                        <img src="../Pictures/gameIcon.png" style="height: 300px; width; 300px; opacity: 0.7">
+                    </div>
+                </div>
+            </div>
+
+            <!--Window Opener-->
+            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="tile">
+                    <div class="front">
+                        <img src="../Pictures/quoteScreenShotCrop.png" style="height: 100%; width: 100%">
+                    </div>
+                    <div class="back">
+                        <div class="projTextWrapper">
+                            <p class="projText">
+                                <h4 style="text-align: center; padding-top: 2%">Random Quote Machine
+                                        <a class="projLinks" href="https://github.com/bartchr808/Random-Quote-Machine"><i style="font-size: 30px" class="fa fa-github"></i></a>
+                                        <a class="projLinks" href="http://codepen.io/bartchr808/pen/PzJOJY"><i style="font-size:30px" class="fa fa-codepen"></i></a>
+                                </h4>
+                                <ul>
+                                    <li>API as a Quote/Author Library.</li>
+                                    <li>JS Jquery to randomly select background and title colour.</li>
+                                    <li>No Twitter button API in order to create custom encoded URL everytime new quote is displayed.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Window Opener-->
+            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="front">
+                    <div id="projBack4">
+                        <img src="../Pictures/cogWheel.png" style="height: 300px; width; 300px; opacity: 0.7">
+                    </div>
+                </div>
+            </div>
+
+            <!--Window Opener-->
+            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0.2%">
+                <div class="tile">
+                    <div class="front">
+                        <img src="../Pictures/localWeather1Crop.png" style="height: 100%; width: 100%">
+                    </div>
+                    <div class="back">
+                        <div class="projTextWrapper">
+                            <p class="projText">
+                                <h4 style="text-align: center; padding-top: 2%">Local Weather <u>(IN PROGRESS)</u>
+                                        <a class="projLinks" href="https://github.com/bartchr808/Show-The-Local-Weather"><i style="font-size: 30px" class="fa fa-github"></i></a>    
+                                </h4>
+                                <ul>
+                                    <li>Loading screen while data gathered.</li>
+                                    <li>User geolocation.</li>
+                                    <li>Long/Lat values into APIs using Ajax; get address & weather data.</li>
+                                    <li>Use callback function in Ajax to distribute weather data to other functions.</li>
+                                    <li>Weather data modifies HTML fields using JQuery.</li>
+                                    <li>Use code ID in weather data to display icon from 3rd partyGithub repository.</li>
+                                    <li>Modify units between metric and imperial.</li>
+                                    <li><b>TO DO:</b> add custom icon animations and polish the UI.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
