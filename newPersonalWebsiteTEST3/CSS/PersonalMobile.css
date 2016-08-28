@@ -116,15 +116,24 @@ navbar-default .navbar-nav li {
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
         line-height: 20px;
     }
+    /*
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
-    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-        background-image: none;
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    background-image: none;
+}
+*/
+    #homeButton,
+    #bioButton,
+    #skillsButton,
+    #projectsButton,
+    #contactButton {
+        color: black
     }
     .nav {
         font-size: 30px;
     }
     .nav li {
-        margin: 0% 0 0% 0;
+        text-align: center;
     }
     .navbar-collapse.collapse {
         /*        display: block !important;*/
