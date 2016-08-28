@@ -42,7 +42,7 @@ function mobileFriendlyNavBar() {
         $(".skillText div p").css("font-size", "160%");
         $("#galleryWrapper").css("margin-left", ($(window).width() / 27) + "px");
     } else if ($(window).width() > 767) {
-        $("#iconRowBox").html(projectTilesD);
+        //        $("#iconRowBox").html(projectTilesD);
         $("#navBar").empty();
         $("#navBar").addClass("animated");
         $("#navBar").css("height", "80px");
@@ -330,17 +330,29 @@ $(document).ready(function () {
 
 /*Contact Window*/
 function openContactWindow() {
+    console.log("tttt");
     $("#windShad").addClass("contactWindowShader");
     $("#contWind").addClass("contactWindow");
     $("#contWind").css("margin-top", "15%");
-    $("#contWind").html(contactWindow);
-    $(".contactWindow").animate({
-        opacity: 1,
-        height: "60%"
-    }, 250);
-    $(".contactWindowShader").animate({
-        opacity: 0.7,
-    }, 250);
+    if ($(window).width() <= 767) {
+        $("#contWind").html(contactWindowM);
+        $(".contactWindow").animate({
+            opacity: 1,
+            height: "80%"
+        }, 250);
+        $(".contactWindowShader").animate({
+            opacity: 0.7,
+        }, 250);
+    } else if ($(window).width() > 767) {
+        $("#contWind").html(contactWindowD);
+        $(".contactWindow").animate({
+            opacity: 1,
+            height: "60%"
+        }, 250);
+        $(".contactWindowShader").animate({
+            opacity: 0.7,
+        }, 250);
+    }
 };
 
 function closeContactWindow() {
@@ -361,159 +373,12 @@ function closeContactWindow() {
 }
 
 /*HTML*/
-var projectTilesD = '<div id="center">' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0%" ontouchstart="this.classList.toggle(\'hover\');">' +
-    '                <div class="tile">' +
-    '                    <div class="front">' +
-    '                        <img src="../Pictures/piWindowCrop.jpg" style="height: 100%; width: 100%">' +
-    '                    </div>' +
-    '                    <div class="back">' +
-    '                        <div class="projTextWrapper">' +
-    '                            <p class="projText">' +
-    '                                <h4 style="text-align: center; padding-top: 2%">Raspberry Pi Window Opener</h4>' +
-    '                                <ul>' +
-    '                                    <li>API to gather weather info.</li>' +
-    '                                    <li>depending on temperatures and whether it is raining, window is kept closed/opened or the motor closes/opens the window.</li>' +
-    '                                    <li>Had to understand the way stepper motor works and how to program stepper motors due to the lack of documentation included with the stepper motor.</li>' +
-    '                                </ul>' +
-    '                            </p>' +
-    '                        </div>' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '            <!--        </div>-->' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">' +
-    '                <div class="front">' +
-    '                    <div id="projBack1">' +
-    '                        <img src="../Pictures/phoneIcon.png" style="height: 300px; width; 300px; opacity: 0.7">' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '            <!--        </div>-->' +
-    '' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">' +
-    '                <div class="front">' +
-    '                    <div id="projBack2">' +
-    '                        <img src="../Pictures/desktopIcon.png" style="height: 300px; width; 300px; opacity: 0.7">' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '            <!--        </div>-->' +
-    '' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0.2%" ontouchstart="this.classList.toggle(\'hover\');">' +
-    '                <div class="tile">' +
-    '                    <div class="front">' +
-    '                        <img src="../Pictures/iconAnimationsFusedCrop.jpg" style="height: 100%; width: 100%">' +
-    '                    </div>' +
-    '                    <div class="back">' +
-    '                        <div class="projTextWrapper">' +
-    '                            <p class="projText">' +
-    '                                <h4 style="text-align: center; padding-top: 2%">Icon Animations <u>(IN PROGRESS)</u>' +
-    '                                        <a class="projLinks" href="https://github.com/bartchr808/Icon-Animations"><i style="font-size: 30px" class="fa fa-github"></i></a>' +
-    '                                </h4>' +
-    '                                <ul>' +
-    '                                    <li>Use CSS to create shapes and colours of clouds, sun, etc.</li>' +
-    '                                    <li>JS Jquery to animate parts of icons (e.g. fade out and shift left).</li>' +
-    '                                </ul>' +
-    '                            </p>' +
-    '                        </div>' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '            <!--        </div>-->' +
-    '' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">' +
-    '                <div class="front">' +
-    '                    <div id="projBack3">' +
-    '                        <img src="../Pictures/gameIcon.png" style="height: 300px; width; 300px; opacity: 0.7">' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '            <!--        </div>-->' +
-    '' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0.2%" ontouchstart="this.classList.toggle(\'hover\');">' +
-    '                <div class="tile">' +
-    '                    <div class="front">' +
-    '                        <img src="../Pictures/quoteScreenShotCrop.png" style="height: 100%; width: 100%">' +
-    '                    </div>' +
-    '                    <div class="back">' +
-    '                        <div class="projTextWrapper">' +
-    '                            <p class="projText">' +
-    '                                <h4 style="text-align: center; padding-top: 2%">Random Quote Machine' +
-    '                                        <a class="projLinks" href="https://github.com/bartchr808/Random-Quote-Machine"><i style="font-size: 30px" class="fa fa-github"></i></a>' +
-    '                                        <a class="projLinks" href="http://codepen.io/bartchr808/pen/PzJOJY"><i style="font-size:30px" class="fa fa-codepen"></i></a>' +
-    '                                </h4>' +
-    '                                <ul>' +
-    '                                    <li>API as a Quote/Author Library.</li>' +
-    '                                    <li>JS Jquery to randomly select background and title colour.</li>' +
-    '                                    <li>No Twitter button API in order to create custom encoded URL everytime new quote is displayed.</li>' +
-    '                                </ul>' +
-    '                            </p>' +
-    '                        </div>' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '            <!--        </div>-->' +
-    '' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper tileFiller" style="margin: 0.2% 0% 0.1% 0.2%">' +
-    '                <div class="front">' +
-    '                    <div id="projBack4">' +
-    '                        <img src="../Pictures/cogWheel.png" style="height: 300px; width; 300px; opacity: 0.7">' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '' +
-    '' +
-    '            <!--Window Opener-->' +
-    '            <!--        <div class="col-sm-2">-->' +
-    '            <div class="tileWrapper mainTile" style="margin: 0.2% 0% 0.1% 0.2%" ontouchstart="this.classList.toggle(\'hover\');">' +
-    '                <div class="tile">' +
-    '                    <div class="front">' +
-    '                        <img src="../Pictures/localWeather1Crop.png" style="height: 100%; width: 100%">' +
-    '                    </div>' +
-    '                    <div class="back">' +
-    '                        <div class="projTextWrapper">' +
-    '                            <p class="projText">' +
-    '                                <h4 style="text-align: center; padding-top: 2%">Local Weather <u>(IN PROGRESS)</u>' +
-    '                                        <a class="projLinks" href="https://github.com/bartchr808/Show-The-Local-Weather"><i style="font-size: 30px" class="fa fa-github"></i></a>    ' +
-    '                                </h4>' +
-    '                                <ul>' +
-    '                                    <li>Loading screen while data gathered.</li>' +
-    '                                    <li>User geolocation.</li>' +
-    '                                    <li>Long/Lat values into APIs using Ajax; get address & weather data.</li>' +
-    '                                    <li>Use callback function in Ajax to distribute weather data to other functions.</li>' +
-    '                                    <li>Weather data modifies HTML fields using JQuery.</li>' +
-    '                                    <li>Use code ID in weather data to display icon from 3rd partyGithub repository.</li>' +
-    '                                    <li>Modify units between metric and imperial.</li>' +
-    '                                    <li><b>TO DO:</b> add custom icon animations and polish the UI.</li>' +
-    '                                </ul>' +
-    '                            </p>' +
-    '                        </div>' +
-    '                    </div>' +
-    '                </div>' +
-    '            </div>' +
-    '        </div>' +
-    '    </div>' +
-    '</body>';
+var contactWindowD = '<div style="padding:0% 2% 2% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 3em">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 3%; font-weight: 600; font-size:1.5em">bart.chr@gmail.com</p><p style="font-weight: 600; font-size:1.5em">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div>'
 
-var contactWindow = '<div style="padding:0% 2% 2% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 3em">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 3%; font-weight: 600; font-size:1.5em">bart.chr@gmail.com</p><p style="font-weight: 600; font-size:1.5em">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div>'
+var contactWindowM = '<div style="padding: 12% 2% 0% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 2.5em; margin-bottom: 10%">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em; margin-top: -8%">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 5%; font-weight: 800; font-size:0.8em">bart.chr@gmail.com</p><p style="font-size: 0.8em; font-weight: 800">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><div style="margin-top: 5%; margin: auto; text-align: center"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div></div>'
 
-var navBarD = '<div class="row"><div class="col-sm-2 col-sm-offset-1"><p id="navBarText"><a id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html">Skills</a></p></div><div class="col-sm-2"><a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a></div><div class="col-sm-2"><p id="navBarText"><a id="projects" style="color: #0058f1" class="navLinks" href="../HTML/projects.html">Projects</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p></div><div class="col-sm-1"></div></div>'
-var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a style="color: #0058f1" id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" href="#">Contact</a></li></ul></div></div></div></div></div>'
+var navBarD = '<div class="row"><div class="col-sm-2 col-sm-offset-1"><p id="navBarText"><a id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html" style="color: #0058f1">Skills</a></p></div><div class="col-sm-2"><a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a></div><div class="col-sm-2"><p id="navBarText"><a id="projects" class="navLinks" href="../HTML/projects.html">Projects</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p></div><div class="col-sm-1"></div></div>'
+var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a style="color: #0058f1" id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" onclick="openContactWindow()">Contact</a></li></ul></div></div></div></div></div>'
 
 
 

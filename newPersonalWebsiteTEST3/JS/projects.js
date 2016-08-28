@@ -254,7 +254,9 @@ $(window).scroll(function (event) {
 
 //$(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px"
 
+/*Contact Window*/
 function openContactWindow() {
+    console.log("tttt");
     $("#windShad").addClass("contactWindowShader");
     $("#contWind").addClass("contactWindow");
     $("#contWind").css("margin-top", "15%");
@@ -280,22 +282,21 @@ function openContactWindow() {
 };
 
 function closeContactWindow() {
-    $(".contactWindow").animate({
+    $(".contactWindow ").animate({
         opacity: 0,
-        height: "0%"
-    }, 250);
+        height: "1%"
+    }, 350);
     $(".contactWindowShader").animate({
         opacity: 0,
     }, 250);
     setTimeout(function () {
         $("#windShad").removeClass("contactWindowShader")
-        $("#contWind").removeClass("contactWindow");
+            //        $("#contWind").removeClass("contactWindow");
         $("#contWind").css("margin-top", "0%");
         $("#contWind").html("");
         console.log("erfe");
     }, 300);
 }
-
 
 
 /*HTML*/
