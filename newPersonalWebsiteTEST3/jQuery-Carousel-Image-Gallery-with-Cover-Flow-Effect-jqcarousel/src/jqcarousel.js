@@ -19,17 +19,15 @@
             jslint nomen: true
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
 ;
 (function ($) {
-
     'use strict';
 
     $.widget('ui.jqcarousel', {
 
         options: {
             eccentricity: 0.99,
-            focus: 250,
+            focus: ($(window).width() / 3),
             animationDuration: 700,
             opacity: true,
             resize: true,
