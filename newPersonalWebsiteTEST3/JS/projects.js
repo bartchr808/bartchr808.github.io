@@ -282,16 +282,16 @@ function openContactWindow() {
 };
 
 function closeContactWindow() {
-    $(".contactWindow ").animate({
+    $(".contactWindow").animate({
         opacity: 0,
-        height: "1%"
-    }, 350);
+        height: "0%"
+    }, 250);
     $(".contactWindowShader").animate({
         opacity: 0,
     }, 250);
     setTimeout(function () {
         $("#windShad").removeClass("contactWindowShader")
-            //        $("#contWind").removeClass("contactWindow");
+        $("#contWind").removeClass("contactWindow");
         $("#contWind").css("margin-top", "0%");
         $("#contWind").html("");
         console.log("erfe");
