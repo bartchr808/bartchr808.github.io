@@ -1,4 +1,6 @@
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type='application/javascript' src='../JS/fastclick.js'></script>
 
     <!--Bunch of metas for dropdown menu to work-->
     <meta charset="utf-8">
@@ -39,8 +41,8 @@
     <script type="text/javascript" src="../jquery.interactive_bg.js"></script>
 
     <!--Import Personal CSS-->
-    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../CSS/PersonalMobile.css" />
-    <!--    <link rel="stylesheet" type="text/css" href="../CSS/PersonalMobile.css" media="screen" />-->
+    <link rel="stylesheet" media="screen and (min-width: 767px)" href="../CSS/Personal.css" />
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="../CSS/PersonalMobile.css" />
 
     <!--Import Personal Javascript-->
     <script type="text/javascript" src="../JS/biography.js"></script>
@@ -78,7 +80,7 @@
 
 
     <div id="windShad" class=""></div>
-    <div id="contWind" class="skillText"></div>
+    <div style="top: 10px; width: 100%" id="contWind" class="skillText"></div>
 
 
     <!--Heading-->
@@ -90,7 +92,7 @@
     <div style="margin: 10% 0 0 0" class="row">
         <div id="bioPara1" class="col-sm-7">
             <p style="float:right" class="textPara">
-                <h1 id="bioTitle" style="padding: 20% 0 0 0%; float:right">About Myself</h1>
+                <h1 id="bioTitle" style="padding: 20% 0 0 0%; float:left">About Myself</h1>
                 <span class="textPara" id="actualBioPara1" style="float:right">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</span></p>
         </div>
 
@@ -112,22 +114,25 @@
 
     </div>
     <br>
-    <div class="row" style="margin: 10% 0% 0 0">
-        <div id="stockPic" class="col-sm-6" style="margin: 0 0% 0 0">
+
+
+    <div class="row" style="margin: 10% 0% 0 0; overflow: hidden;">
+        <div id="bioPara2" class="col-sm-6">
+            <p class="textPara" style="background-color: white; box-sizing: border-box">One of my "not so secret" hobbies of mine is stock trading! I've been trading for the past six years and using technical analysis. However, very recently I have been aggressively fiddling with statistical arbitrage strategies and their algorithms like Pair Trading. When I Realized the majority of daily trades are done by computer algorithms, I was baffled and mezmorized; this was what sparked my interest in persuing Computer Science.</p>
+        </div>
+
+        <div id="stockPic" class="col-sm-6" style="margin: 30% 0% 0 -4%">
             <div class="wrapper">
                 <div class="inner">
                     <figure> <img id="stockBack" src="../Pictures/stockBack.png" style="z-index:-1">
                     </figure>
-                    <figure> <img id="stockMiddle" style="margin-top:-268px; z-index: 5000" src="../Pictures/stockMiddle.png">
+                    <figure> <img id="stockMiddle" style="margin-top:-52%; z-index: 5000" src="../Pictures/stockMiddle.png">
                     </figure>
-                    <figure> <img id="stockFront" style="margin-top:-268px" src="../Pictures/stockFront.png">
+                    <figure> <img id="stockFront" style="margin-top:-52%" src="../Pictures/stockFront.png">
                     </figure>
                 </div>
             </div>
         </div>
-        <div id="bioPara2" class="col-sm-6">
-            <p class="textPara" style="background-color: white; width: 400px; box-sizing: border-box; padding: 0 5% 0% 0%; margin: 0 0% 0 0%">One of my "not so secret" hobbies of mine is stock trading! I've been trading for the past six years and using technical analysis. However, very recently I have been aggressively fiddling with statistical arbitrage strategies and their algorithms like Pair Trading. When I Realized the majority of daily trades are done by computer algorithms, I was baffled and mezmorized; this was what sparked my interest in persuing Computer Science.</p>
-        </div>
     </div>
     <br>
     <br>
@@ -142,16 +147,20 @@
     <br>
 
 
-    <div id="bioPara3" style="margin-top: -28.89%">
-        <p class="textPara" style="padding: 0 2% 0 2%">I have been teaching myself CS since the Winter of 2015/2016. I started out with Python during which I built small text-based adventure games, and then moved on to HTML5, CSS, and JS for web development using <a class="textLink" href="https://www.freecodecamp.com/">freeCodeCamp</a>. Also, I used Python in building some of my Raspberry Pi projects. After completing my undergrad, I hope to get a Masters or PhD in a field in math or CS and go on and either work in software development or become a quant in New York.
+
+
+
+    <div id="bioPara3" style="margin-top: -28.89%; padding: 0 1em 0 1em;">
+        <p class="textPara">I have been teaching myself CS since the Winter of 2015/2016. I started out with Python during which I built small text-based adventure games, and then moved on to HTML5, CSS, and JS for web development using <a class="textLink" href="https://www.freecodecamp.com/">freeCodeCamp</a>. Also, I used Python in building some of my Raspberry Pi projects. After completing my undergrad, I hope to get a Masters or PhD in a field in math or CS and go on and either work in software development or become a quant in New York.
         </p>
-        <p class="textPara" style="font-size: 30px; color: #0058f1"><i>And the biggest thing I've discovered so far is that there's more to being a programmer than just coding. The self-discovery, self-motivation, outside of the box thinking, and perseverance that a good programmer is required to have is what keeps bringing me back to the keyboard.</i></p>
+        <p class="textPara" style="margin: 20% 0 25% 0; font-size: 1.5em; line-height: 1.2em; color: #0058f1; text-align: left"><i>And the biggest thing I've discovered so far is that there's more to being a programmer than just coding. The self-discovery, self-motivation, outside of the box thinking, and perseverance that a good programmer is required to have is what keeps bringing me back to the keyboard.</i></p>
     </div>
 
 
-    <div id="bioSplitter" style="height: 500px; margin-top: -0.8%">
+
+    <div id="bioSplitter" style="height: auto; margin-top: 0.8%">
         <div id="bioPara4Wrapper">
-            <p class="textPara" id="bioPara4" style="max-width: 1000px; font-size: 160%"><i>Whether it be working on front-end, back-end, mobile, security, data engineering, or just having a conversation about what's going on in the global economic and political environment, the best thing I can do for myself is to work hard and progress with my colleagues!</i>
+            <p class="textPara" id="bioPara4" style="font-size: 1.5em; line-height: 1.2em; max-width: 1000px"><i>Whether it be working on front-end, back-end, mobile, security, data engineering, or just having a conversation about what's going on in the global economic and political environment, the best thing I can do for myself is to work hard and progress with my colleagues!</i>
             </p>
         </div>
     </div>

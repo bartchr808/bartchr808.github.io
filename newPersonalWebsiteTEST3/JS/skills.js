@@ -47,9 +47,11 @@ function mobileFriendlyNavBar() {
         $("#navBar").addClass("animated");
         $("#navBar").css("height", "80px");
         $("#navBar").html(navBarD);
+        $("#skillsHeader h1").css("padding", "10% 0% 10% 0%");
         $(".projTextWrapper, .tileWrapper, .front, .back").css("width", "300px");
         $(".projTextWrapper, .tileWrapper, .front, .back").css("height", "300px");
         $(".skillText p").css("text-align", "justify");
+        $("#skillText").css("text-align", "justify");
         $(".skillText div p").css("font-size", "200%");
         $("#galleryWrapper").css("margin-left", "0px");
     }
@@ -214,22 +216,22 @@ $(window).scroll(function (event) {
         var scrollNum = $(this).scrollTop();
         //    console.log($(".collapsingNav").css("height"));
         //    console.log((window.innerHeight - 60).toString() + "px");
-        if ($(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px") {
-            $("#navBarM").removeClass("animated");
-        } else {
-            $("#navBarM").addClass("animated");
-        }
+        //        if ($(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px") {
+        //            $("#navBarM").removeClass("animated");
+        //        } else {
+        //            $("#navBarM").addClass("animated");
+        //        }
 
         if (scrollNum > lastScrollTop) {
             $("#navBar").removeClass("slideInDown");
             $("#navBar").addClass("slideOutUp");
-            $("#navBarM").removeClass("slideInDown");
-            $("#navBarM").addClass("slideOutUp");
+            //            $("#navBarM").removeClass("slideInDown");
+            //            $("#navBarM").addClass("slideOutUp");
         } else {
             $("#navBar").removeClass("slideOutUp");
             $("#navBar").addClass("slideInDown");
-            $("#navBarM").removeClass("slideOutUp");
-            $("#navBarM").addClass("slideInDown");
+            //            $("#navBarM").removeClass("slideOutUp");
+            //            $("#navBarM").addClass("slideInDown");
         }
         lastScrollTop = scrollNum;
     }
@@ -237,37 +239,6 @@ $(window).scroll(function (event) {
 
 //$(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px"
 
-/*Contact Window*/
-function openContactWindow() {
-    $("#windShad").addClass("contactWindowShader");
-    $("#contWind").addClass("contactWindow");
-    $("#contWind").css("margin-top", "15%");
-    $("#contWind").html(contactWindow);
-    $(".contactWindow").animate({
-        opacity: 1,
-        height: "60%"
-    }, 250);
-    $(".contactWindowShader").animate({
-        opacity: 0.7,
-    }, 250);
-};
-
-function closeContactWindow() {
-    $(".contactWindow").animate({
-        opacity: 0,
-        height: "0%"
-    }, 250);
-    $(".contactWindowShader").animate({
-        opacity: 0,
-    }, 250);
-    setTimeout(function () {
-        $("#windShad").removeClass("contactWindowShader")
-        $("#contWind").removeClass("contactWindow");
-        $("#contWind").css("margin-top", "0%");
-        $("#contWind").html("");
-        console.log("erfe");
-    }, 300);
-}
 
 
 
@@ -357,9 +328,7 @@ $(document).ready(function () {
 });
 
 
-
-
-
+/*Contact Window*/
 function openContactWindow() {
     $("#windShad").addClass("contactWindowShader");
     $("#contWind").addClass("contactWindow");

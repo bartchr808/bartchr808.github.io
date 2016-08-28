@@ -44,6 +44,7 @@ function mobileFriendlyNavBar() {
         $("#navBar").addClass("animated");
         $("#navBar").css("height", "80px");
         $("#navBar").html(navBarD);
+        $("#projectsHeader h1").css("padding", "10% 0% 10% 0%");
         $(".projTextWrapper, .tileWrapper, .front, .back").css("width", "300px");
         $(".projTextWrapper, .tileWrapper, .front, .back").css("height", "300px");
         //        projTileClick(false);
@@ -230,22 +231,22 @@ $(window).scroll(function (event) {
         var scrollNum = $(this).scrollTop();
         //    console.log($(".collapsingNav").css("height"));
         //    console.log((window.innerHeight - 60).toString() + "px");
-        if ($(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px") {
-            $("#navBarM").removeClass("animated");
-        } else {
-            $("#navBarM").addClass("animated");
-        }
+        //        if ($(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px") {
+        //            $("#navBarM").removeClass("animated");
+        //        } else {
+        //            $("#navBarM").addClass("animated");
+        //        }
 
         if (scrollNum > lastScrollTop) {
             $("#navBar").removeClass("slideInDown");
             $("#navBar").addClass("slideOutUp");
-            $("#navBarM").removeClass("slideInDown");
-            $("#navBarM").addClass("slideOutUp");
+            //            $("#navBarM").removeClass("slideInDown");
+            //            $("#navBarM").addClass("slideOutUp");
         } else {
             $("#navBar").removeClass("slideOutUp");
             $("#navBar").addClass("slideInDown");
-            $("#navBarM").removeClass("slideOutUp");
-            $("#navBarM").addClass("slideInDown");
+            //            $("#navBarM").removeClass("slideOutUp");
+            //            $("#navBarM").addClass("slideInDown");
         }
         lastScrollTop = scrollNum;
     }
@@ -253,19 +254,29 @@ $(window).scroll(function (event) {
 
 //$(".collapsingNav").css("height") == (window.innerHeight - 60).toString() + "px"
 
-/*Contact Window*/
 function openContactWindow() {
     $("#windShad").addClass("contactWindowShader");
     $("#contWind").addClass("contactWindow");
     $("#contWind").css("margin-top", "15%");
-    $("#contWind").html(contactWindow);
-    $(".contactWindow").animate({
-        opacity: 1,
-        height: "60%"
-    }, 250);
-    $(".contactWindowShader").animate({
-        opacity: 0.7,
-    }, 250);
+    if ($(window).width() <= 767) {
+        $("#contWind").html(contactWindowM);
+        $(".contactWindow").animate({
+            opacity: 1,
+            height: "80%"
+        }, 250);
+        $(".contactWindowShader").animate({
+            opacity: 0.7,
+        }, 250);
+    } else if ($(window).width() > 767) {
+        $("#contWind").html(contactWindowD);
+        $(".contactWindow").animate({
+            opacity: 1,
+            height: "60%"
+        }, 250);
+        $(".contactWindowShader").animate({
+            opacity: 0.7,
+        }, 250);
+    }
 };
 
 function closeContactWindow() {
@@ -437,7 +448,9 @@ var projectTilesD = '<div id="center">' +
     '    </div>' +
     '</body>';
 
-var contactWindow = '<div style="padding:0% 2% 2% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 3em">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 3%; font-weight: 600; font-size:1.5em">bart.chr@gmail.com</p><p style="font-weight: 600; font-size:1.5em">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div>'
+var contactWindowD = '<div style="padding:0% 2% 2% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 3em">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 3%; font-weight: 600; font-size:1.5em">bart.chr@gmail.com</p><p style="font-weight: 600; font-size:1.5em">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div>'
+
+var contactWindowM = '<div style="padding: 12% 2% 0% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 2.5em; margin-bottom: 10%">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em; margin-top: -8%">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 5%; font-weight: 800; font-size:0.8em">bart.chr@gmail.com</p><p style="font-size: 0.8em; font-weight: 800">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><div style="margin-top: 5%; margin: auto; text-align: center"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div></div>'
 
 var navBarD = '<div class="row"><div class="col-sm-2 col-sm-offset-1"><p id="navBarText"><a id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html">Skills</a></p></div><div class="col-sm-2"><a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a></div><div class="col-sm-2"><p id="navBarText"><a id="projects" style="color: #0058f1" class="navLinks" href="../HTML/projects.html">Projects</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p></div><div class="col-sm-1"></div></div>'
-var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a style="color: #0058f1" id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" href="#">Contact</a></li></ul></div></div></div></div></div>'
+var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a style="color: #0058f1" id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" onclick="openContactWindow()">Contact</a></li></ul></div></div></div></div></div>'

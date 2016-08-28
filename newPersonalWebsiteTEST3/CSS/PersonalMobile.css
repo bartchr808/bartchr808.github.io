@@ -243,9 +243,11 @@ li {
     color: white;
     position: fixed;
     height: 0%;
+    /*    width: 500px;*/
+    /*
     left: 0;
     right: 0;
-    top: 0;
+*/
     margin: auto;
     overflow: auto;
     z-index: 500;
@@ -747,14 +749,15 @@ body {
 }
 
 .textPara {
-    line-height: 1.8em;
+    line-height: 2.0em;
+    padding: 0 1em 0 1em;
     letter-spacing: 0.5px;
-    width: calc(100% - 100px);
-    max-width: 800px;
+    width: calc(100%);
+    /*    max-width: 800px;*/
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
-    font-size: 1.5em;
+    font-size: 1.15em;
 }
 
 
@@ -789,7 +792,11 @@ body {
 }
 
 #bioTitle {
-    color: blue
+    color: blue;
+    width: calc(90%);
+    /*    max-width: 800px;*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bioSplitter {
@@ -806,15 +813,18 @@ body {
 }
 
 #bioPara1 {
-    /*
-    float: left;
-    margin: 0 0 0 10%;
-    padding: 7% 0 0 10%;
-    width: 600px;
-    height: 500px;
-            border: 1px solid blue;
-    box-sizing: border-box;
-*/
+    /*    float: left;*/
+    /*    margin: 0 0 0 0%;*/
+    /*    padding: 7% 0 0 10%;*/
+    /*    width: 600px;*/
+    /*    height: 500px;*/
+    /*            border: 1px solid blue;*/
+    /*    box-sizing: border-box;*/
+}
+
+#actualBioPara1 {
+    margin: auto;
+    /*    margin: 0;*/
 }
 
 #test {
@@ -826,11 +836,11 @@ body {
 }
 
 #bioPara4Wrapper {
-    color: #0058f1;
+    color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    margin: 15% 15% 0 15%;
-    padding: 0.2% 2% 0.2% 2%;
-    border-radius: 20px
+    /*    margin: 15% 15% 0 15%;*/
+    padding: 1em 1em 1em 1em;
+    border-radius: 0px
 }
 
 #bioPara4 {
@@ -1315,10 +1325,13 @@ transform: rotateY(30deg);
 }
 
 #stockFront,
-#stockMiddle {
+#stockMiddle,
+#stockBack {
     transition: .66s
 }
 
+
+/*
 .expand #stockFront {
     -ms-transform: translate(300px, 40px);
     -webkit-transform: translate(300px, 40px);
@@ -1329,6 +1342,28 @@ transform: rotateY(30deg);
     -ms-transform: translate(150px, 20px);
     -webkit-transform: translate(150px, 20px);
     transform: translate(150px, 20px);
+}
+*/
+
+.expand #stockFront {
+    -ms-transform: translate(80px, 20px);
+    -webkit-transform: translate(80px, 20px);
+    transform: translate(80px, 20px);
+}
+
+.expand #stockBack {
+    /*    -ms-transform: translate(-150px, -20px);*/
+    /*    -webkit-transform: translate(-150px, -20px);*/
+    /*    transform: translate(-150px, -20px);*/
+    -ms-transform: perspective(1000) translate3d(-50px, -20px, -1px);
+    -webkit-transform: perspective(1000px) translate3d(-50px, -20px, -1px);
+    transform: perspective(1000px) translate3d(-50px, -20px, -1px);
+}
+
+.expand #stockMiddle {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 
