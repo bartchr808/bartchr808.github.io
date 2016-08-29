@@ -1,4 +1,6 @@
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type='application/javascript' src='../JS/fastclick.js'></script>
 
     <!--Bunch of metas for dropdown menu to work-->
     <meta charset="utf-8">
@@ -33,8 +35,8 @@
     <script type="text/javascript" src="../jquery.interactive_bg.js"></script>
 
     <!--Import Personal CSS-->
-    <!--    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../CSS/PersonalMobile.css" />-->
-    <link rel="stylesheet" type="text/css" href="../CSS/Personal.css" media="screen" />
+    <link rel="stylesheet" media="screen and (min-width: 767px)" href="../CSS/Personal.css" />
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="../CSS/PersonalMobile.css" />
 
     <!--Import Personal Javascript-->
     <script type="text/javascript" src="../JS/home.js"></script>
@@ -91,25 +93,26 @@
     </div>
 
 
-    <div id="windShad" class=""></div>
-    <div id="contWind" class="skillText"></div>
+    <div id="windShad" style="z-index: 1000" class=""></div>
+    <div style="top: 10px; width: 100%; z-index: 1000" id="contWind" class="skillText"></div>
 
 
     <!-- first section - Home -->
     <div id="home">
-        <h1 id="preTextChange">Bart. Waterloo CS Student.</h1>
+        <h1 id="preTextChange">Bart.<br>Waterloo CS Student.<br>
+            <span id="textFixed" class="animated">I am
+            <span id="textChange" class="animated"> Hardworking.</span>
+            </span>
+            </h1>
+    </div>
+    <!--
+    <div id="home">
+        <h1 id="preTextChange">Bart.<br>Waterloo CS Student.</h1>
         <div id="textChangeWrapper">
             <h2 id="textFixed" class="animated">I am
             <span id="textChange" class="animated"> Intelligent.</span>
             </h2>
         </div>
-        <!--
-        <div class="shell-wrap">
-    <p class="shell-top-bar">/Users/bartchr808/Documents/personalwebsite/</p>
-    <div class="shell-body">
-        <span class="typeWriter"></span>
-    </div>
-</div>
 -->
 
 
