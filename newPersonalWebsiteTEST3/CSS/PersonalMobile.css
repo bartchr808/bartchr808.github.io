@@ -90,10 +90,14 @@ navbar-default .navbar-nav li {
     float: none;
 }
 
+.navbar-header {
+    /*    border-bottom: 1px solid black;*/
+}
+
 @media (min-width: 168px) {
     .navbar.navbar-default {
-        background-color: lightgray;
-        border: none;
+        background-color: white;
+        border-bottom: 1px solid black;
         border-right: 1px solid #f5f5f5;
     }
     .navbar-default .navbar-nav .open .dropdown-menu {
@@ -775,7 +779,7 @@ body {
 #bioHeader {
     background: url("../Pictures/chicagoBackGround.jpeg") no-repeat center center fixed;
     display: table;
-    height: 40%;
+    height: 30%;
     position: relative;
     width: 100%;
     -webkit-background-size: cover;
@@ -866,7 +870,7 @@ transform: rotateY(30deg);
 #skillsHeader {
     background: url("../Pictures/codeWallpaper.jpeg") no-repeat center center fixed;
     display: table;
-    height: 40%;
+    height: 30%;
     position: relative;
     width: 100%;
     -webkit-background-size: cover;

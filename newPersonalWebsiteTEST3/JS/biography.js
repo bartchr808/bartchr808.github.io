@@ -26,6 +26,9 @@ $(window).resize(function () {
 
 function mobileFriendlyNavBar() {
     if ($(window).width() <= 767) { //767
+        $("body").empty();
+        $("body").html(bioTextM);
+        //                $("#bioTitle").css("margin-left", "5.4381%"); //37.625
         $("#navBar").empty();
         $("#navBar").removeClass("animated");
         $("#navBar").css("height", "0px");
@@ -40,6 +43,8 @@ function mobileFriendlyNavBar() {
         //        $("#stockBack, #stockMiddle, #stockFront").css("width", ($(window).width() / 2) + "px");
         $(".wrapper").css("width", ($(window).width()) + "px");
     } else if ($(window).width() > 767) {
+        $("body").empty();
+        $("body").html(bioTextD);
         //        $("#iconRowBox").html(projectTilesD);
         $("#navBar").empty();
         $("#navBar").addClass("animated");
@@ -282,21 +287,24 @@ function closeContactWindow() {
 
 
 $(document).ready(function () {
-    //    $("#bioTitle").css("opacity", 0);
-    //    $("#bioPara1").css("opacity", 0);
-    //    $("#profilePic").css("opacity", 0);
+    $("#bioTitle").css("opacity", 0);
+    $("#bioPara1").css("opacity", 0);
+    $("#profilePic").css("opacity", 0);
     //    $("#bioPara2").css("opacity", 0);
     //    $("#stockPic").css("opacity", 0);
-    //    $("#bioPara3").css("opacity", 0);
+    $("#bioPara3").css("opacity", 0);
     //    $("#bioPara4").css("opacity", 0);
-    $("#bioTitle").css("margin-left", "5.4381%"); //37.625
-    $("#bioTitle").css("opacity", 1);
-    $("#actualBioPara1").css("margin-right", "0%"); //9.4375
-    $("#bioPara1").css("opacity", 1);
-    //            $("#actualBioPara1").css("margin-right", "10%"); //9.4375
-    //            $("#bioPara1").css("opacity", 1);
-    $("#profilePic").css("margin-top", "5.35%");
-    $("#profilePic").css("opacity", 1);
+    //    $("#bioTitle").css("margin-left", "5.4381%"); //37.625
+    if ($(window).width() <= 767) {
+        $("#bioTitle").css("opacity", 1);
+        $("#actualBioPara1").css("margin-right", "0%"); //9.4375
+        $("#bioPara1").css("opacity", 1);
+        $("#bioPara3").css("opacity", 1);
+        //            $("#actualBioPara1").css("margin-right", "10%"); //9.4375
+        //            $("#bioPara1").css("opacity", 1);
+        $("#profilePic").css("margin-top", "5.35%");
+        $("#profilePic").css("opacity", 1);
+    }
 });
 
 ///*NavBar Disappear*/
@@ -314,6 +322,7 @@ $(document).ready(function () {
 //});
 
 $(document).ready(function () {
+
 
 
 
@@ -362,9 +371,19 @@ $(document).ready(function () {
             //            $("#bioPara2").fadeOut();
             //            $("#bioPara3").css("padding-top", "35%");
         };
+        if ($(window).scrollTop() < 1600 && $(window).scrollTop() > 1200 && $(window).width() > 767) {
+            $("#bioPara3").css("margin-top", (-90 + $(window).scrollTop() / 20).toString() + "%");
+            $("#bioPara3").css("opacity", -8 + $(window).scrollTop() / 180);
+            $("#bioPara3").css("margin-bottom", (0 + $(window).scrollTop() / 200).toString() + "%");
+        } else if ($(window).scrollTop() > 1600 && $(window).width() > 767) {
+            $("#bioPara3").css("margin-top", "-10.05%");
+            $("#bioPara3").css("margin-bottom", "8.745%");
+            $("#bioPara3").css("opacity", 1);
+        }
 
         //Mobile Bio
         if ($(window).scrollTop() < 316 && $(window).width() <= 767) {
+            //            $("#bioTitle").css("margin-left", "5.4381%"); //5.4381
             //            $("#bioTitle").css("margin-left", (-54.7 + $(window).scrollTop() / 5.25).toString() + "%"); //37.625
             //            $("#bioTitle").css("opacity", 0 + $(window).scrollTop() / 300);
             //            $("#bioPara1").css("opacity", 0 + $(window).scrollTop() / 300);
@@ -374,6 +393,7 @@ $(document).ready(function () {
             //            $("#profilePic").css("opacity", 0 + $(window).scrollTop() / 300);
 
         } else if ($(window).scrollTop() > 315 && $(window).width() <= 767) {
+            //            $("#bioTitle").css("margin-left", "5.4381%"); //5.4381
             //            $("#bioTitle").css("margin-left", "5.4381%"); //37.625
             //            $("#bioTitle").css("opacity", 1);
             //            $("#actualBioPara1").css("margin-right", "0%"); //9.4375
@@ -428,17 +448,15 @@ $(document).ready(function () {
             //            $("#bioPara3").css("padding-top", "35%");
         };
 
-
-
-        if ($(window).scrollTop() < 1600 && $(window).scrollTop() > 1200) {
-            $("#bioPara3").css("margin-top", (-115 + $(window).scrollTop() / 23).toString() + "%");
-            $("#bioPara3").css("opacity", -8 + $(window).scrollTop() / 180);
-            $("#bioPara3").css("margin-bottom", (0 + $(window).scrollTop() / 200).toString() + "%");
-        } else if ($(window).scrollTop() > 1600) {
-            $("#bioPara3").css("margin-top", "-45.4783%");
-            $("#bioPara3").css("margin-bottom", "8.745%");
-            $("#bioPara3").css("opacity", 1);
-        };
+        //        if ($(window).scrollTop() < 1600 && $(window).scrollTop() > 1200) {
+        //            $("#bioPara3").css("margin-top", (-115 + $(window).scrollTop() / 23).toString() + "%");
+        //            $("#bioPara3").css("opacity", -8 + $(window).scrollTop() / 180);
+        //            $("#bioPara3").css("margin-bottom", (0 + $(window).scrollTop() / 200).toString() + "%");
+        //        } else if ($(window).scrollTop() > 1600) {
+        //            $("#bioPara3").css("margin-top", "-45.4783%");
+        //            $("#bioPara3").css("margin-bottom", "8.745%");
+        //            $("#bioPara3").css("opacity", 1);
+        //        };
 
 
 
@@ -461,5 +479,232 @@ var contactWindowD = '<div style="padding:0% 2% 2% 2%"><h1 style="font-family: Q
 var contactWindowM = '<div style="padding: 12% 2% 0% 2%"><h1 style="font-family: Quatro Slab; font-weight: bold; font-size: 2.5em; margin-bottom: 10%">Hi There!<a onclick="closeContactWindow()"><span class="crossClose"> </span></a></h1><p style="font-size: 0.90em; line-height: 1.2em; margin-top: -8%">Interested in working with me on a project? Or take me with you into any of your business ventures? Or just curious? Whatever it is, lets get in touch!</p><p style="margin-top: 5%; font-weight: 800; font-size:0.8em">bart.chr@gmail.com</p><p style="font-size: 0.8em; font-weight: 800">bchrzasz@edu.uwaterloo.ca</p><div style="margin-top: 5%; font-size: 1.5em"><div style="margin-top: 5%; margin: auto; text-align: center"><span><a style="padding-right: 5%" class="contactLinks" href="https://github.com/bartchr808"><i class="fa fa-github"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=bart.chr@gmail.com&tf=1"><i class="fa fa-envelope"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://codepen.io/bartchr808/pens/public/"><i class="fa fa-codepen"></i></a></span><span><a style="padding-right: 5%" class="contactLinks" href="https://www.linkedin.com/in/bartlomiej-c-1222a010a?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a></span></div></div></div>'
 
 var navBarD = '<div class="row"><div class="col-sm-2 col-sm-offset-1"><p id="navBarText"><a style="color: #0058f1" id="bio" class="navLinks" href="../HTML/biography.html">Biography</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html">Skills</a></p></div><div class="col-sm-2"><a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a></div><div class="col-sm-2"><p id="navBarText"><a id="projects" class="navLinks" href="../HTML/projects.html">Projects</a></p></div><div class="col-sm-2"><p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p></div><div class="col-sm-1"></div></div>'
-    //var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a style="color: #0058f1" id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" onclick="openContactWindow()">Contact</a></li></ul></div></div></div></div></div>'
-var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a style="color: #0058f1" id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" onclick="openContactWindow()">Contact</a></li></ul></div></div></div></div></div>'
+var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a style="color: #0058f1" id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" onclick="openContactWindow()">Contact</a></li></ul></div></div></div></div></div>'
+    //var navBarM = '<div class="row"><div class="col-sm-4"><div class="sidebar-nav"><div id="navBarM" style="padding: 0 0 0 0; margin: 0 0 0 0" class="animated navbar navbar-default navbar-fixed-top" role="navigation"><div class="navbar-header"><img style="margin: 0% 0 0 2%; height: 60px; width: auto; float:left" src="../Pictures/bartLogo.png"><div onclick="openNav()" id="nav-icon"><span></span><span></span><span></span><span></span></div></div><div class="collapsingNav"><ul class="nav navbar-nav"><li><a id="homeButton" class="navLinks animated" href="../HTML/home.html">Home</a></li><li><a id="bioButton" class="animated" href="../HTML/biography.html">Biography</a></li><li><a id="skillsButton" class="animated" href="../HTML/skills.html">Skills</a></li><li><a style="color: #0058f1" id="projectsButton" class="animated" href="../HTML/projects.html">Projects</a></li><li><a id="contactButton" class="animated" onclick="openContactWindow()">Contact</a></li></ul></div></div></div></div></div>'
+
+
+var bioTextD = '    <!--Header-->' +
+    '    <div id="navBar" class="animated">' +
+    '        <div class="row">' +
+    '            <div class="col-sm-2 col-sm-offset-1">' +
+    '                <p id="navBarText"><a id="bio" style="color: #0058f1" class="navLinks" href="../HTML/biography.html">Biography</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html">Skills</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <p id="navBarText"><a id="projects" class="navLinks" href="../HTML/projects.html">Projects</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-1">' +
+    '            </div>' +
+    '        </div>' +
+    '    </div>' +
+    '' +
+    '' +
+    '    <div id="windShad" class=""></div>' +
+    '    <div id="contWind" class="skillText"></div>' +
+    '' +
+    '' +
+    '    <!--Heading-->' +
+    '    <div id="bioHeader">' +
+    '        <h1 style="color: white; padding: 10% 0 0 0; text-align: center; font-size: 60px">Biography</h1>' +
+    '    </div>' +
+    '' +
+    '' +
+    '    <div style="margin: 10% 0 0 0" class="row">' +
+    '        <div id="bioPara1" class="col-sm-7">' +
+    '            <p style="float:right" class="textPara">' +
+    '                <h1 id="bioTitle" style="padding: 20% 0 0 0%; float:right">About Myself</h1>' +
+    '                <span class="textPara" id="actualBioPara1" style="float:right">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</span></p>' +
+    '        </div>' +
+    '' +
+    '' +
+    '        <!--' +
+    '    <div style="margin: 10% 0 0 0" class="row">' +
+    '        <div id="bioPara1" class="col-sm-7">' +
+    '            <div id="bioTitle" style="padding: 14% 0 0 0%">' +
+    '                <h1>About Myself</h1>' +
+    '            </div>' +
+    '            <p style="float:right" class="textPara" id="actualBioPara1">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</p>' +
+    '            </span>' +
+    '        </div>' +
+    '-->' +
+    '' +
+    '        <div class="col-sm-5" id="profilePic" style="margin: 0% 0 0 0">' +
+    '            <img id="actualProfilePic" src="../Pictures/bodyShot.png" class="imgCenter">' +
+    '        </div>' +
+    '' +
+    '    </div>' +
+    '    <br>' +
+    '    <div class="row" style="margin: 10% 0% 0 0">' +
+    '        <div id="stockPic" class="col-sm-6" style="margin: 0 0% 0 0">' +
+    '            <div class="wrapper">' +
+    '                <div class="inner">' +
+    '                    <figure> <img id="stockBack" src="../Pictures/stockBack.png" style="z-index:-1">' +
+    '                    </figure>' +
+    '                    <figure> <img id="stockMiddle" style="margin-top:-268px; z-index: 5000" src="../Pictures/stockMiddle.png">' +
+    '                    </figure>' +
+    '                    <figure> <img id="stockFront" style="margin-top:-268px" src="../Pictures/stockFront.png">' +
+    '                    </figure>' +
+    '                </div>' +
+    '            </div>' +
+    '        </div>' +
+    '        <div id="bioPara2" class="col-sm-6">' +
+    '            <p class="textPara" style="background-color: white; width: 400px; box-sizing: border-box; padding: 0 5% 0% 0%; margin: 0 0% 0 0%">One of my "not so secret" hobbies of mine is stock trading! I\'ve been trading for the past six years and using technical analysis. However, very recently I have been aggressively fiddling with statistical arbitrage strategies and their algorithms like Pair Trading. When I Realized the majority of daily trades are done by computer algorithms, I was baffled and mezmorized; this was what sparked my interest in persuing Computer Science.</p>' +
+    '        </div>' +
+    '    </div>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '' +
+    '' +
+    '    <div id="bioPara3" style="margin-top: -28.89%">' +
+    '        <p class="textPara" style="padding: 0 2% 0 2%">I have been teaching myself CS since the Winter of 2015/2016. I started out with Python during which I built small text-based adventure games, and then moved on to HTML5, CSS, and JS for web development using <a class="textLink" href="https://www.freecodecamp.com/">freeCodeCamp</a>. Also, I used Python in building some of my Raspberry Pi projects. After completing my undergrad, I hope to get a Masters or PhD in a field in math or CS and go on and either work in software development or become a quant in New York.' +
+    '        </p>' +
+    '        <p class="textPara" style="font-size: 30px; color: #0058f1"><i>And the biggest thing I\'ve discovered so far is that there\'s more to being a programmer than just coding. The self-discovery, self-motivation, outside of the box thinking, and perseverance that a good programmer is required to have is what keeps bringing me back to the keyboard.</i></p>' +
+    '    </div>' +
+    '' +
+    '' +
+    '    <div id="bioSplitter" style="height: 500px; margin-top: -0.8%">' +
+    '        <div id="bioPara4Wrapper">' +
+    '            <p class="textPara" id="bioPara4" style="max-width: 1000px; font-size: 160%"><i>Whether it be working on front-end, back-end, mobile, security, data engineering, or just having a conversation about what\'s going on in the global economic and political environment, the best thing I can do for myself is to work hard and progress with my colleagues!</i>' +
+    '            </p>' +
+    '        </div>' +
+    '    </div>' +
+    '</body>';
+
+
+var bioTextM = '    <!--Header-->' +
+    '    <div id="navBar" class="animated">' +
+    '        <div class="row">' +
+    '            <div class="col-sm-2 col-sm-offset-1">' +
+    '                <p id="navBarText"><a id="bio" style="color: #0058f1" class="navLinks" href="../HTML/biography.html">Biography</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <p id="navBarText"><a id="skills" class="navLinks" href="../HTML/skills.html">Skills</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <a href="home.html"><img class="activeTab" id="logo" src="../Pictures/bartLogo.png"></a>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <p id="navBarText"><a id="projects" class="navLinks" href="../HTML/projects.html">Projects</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-2">' +
+    '                <p id="navBarText"><a id="contact" class="navLinks" onclick="openContactWindow()">Contact</a></p>' +
+    '            </div>' +
+    '            <div class="col-sm-1">' +
+    '            </div>' +
+    '        </div>' +
+    '    </div>' +
+    '' +
+    '' +
+    '    <div id="windShad" style="z-index: 1000" class=""></div>' +
+    '    <div style="top: 10px; width: 100%; z-index: 1000" id="contWind" class="skillText"></div>' +
+    '' +
+    '' +
+    '    <!--Heading-->' +
+    '' +
+    '' +
+    '    <div id="bioHeader">' +
+    '        <h1 style="color: white; padding: 10% 0 0 0; text-align: center; font-size: 60px">Biography</h1>' +
+    '    </div>' +
+    '' +
+    '' +
+    '' +
+    '    <!--' +
+    '    <div id="projectsHeader">' +
+    '<h1 style="padding: 10% 0 10% 0; text-align: center; font-size: 60px">Projects</h1>' +
+    '</div>' +
+    '-->' +
+    '' +
+    '' +
+    '' +
+    '    <div style="margin: -10% 0 0 0" class="row">' +
+    '        <div id="bioPara1" class="col-sm-7">' +
+    '            <p style="float:right" class="textPara">' +
+    '                <h1 id="bioTitle" style="padding: 20% 0 0 11%; text-align: center; float:left">About Myself</h1><span class="textPara" id="actualBioPara1" style="float:left">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</span></p>' +
+    '        </div>' +
+    '' +
+    '' +
+    '        <!--' +
+    '    <div style="margin: 10% 0 0 0" class="row">' +
+    '        <div id="bioPara1" class="col-sm-7">' +
+    '            <div id="bioTitle" style="padding: 14% 0 0 0%">' +
+    '                <h1>About Myself</h1>' +
+    '            </div>' +
+    '            <p style="float:right" class="textPara" id="actualBioPara1">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</p>' +
+    '            </span>' +
+    '        </div>' +
+    '-->' +
+    '' +
+    '        <div class="col-sm-5" id="profilePic" style="margin: 0% 0 0 0">' +
+    '            <img id="actualProfilePic" src="../Pictures/bodyShot.png" class="imgCenter">' +
+    '        </div>' +
+    '' +
+    '    </div>' +
+    '    <br>' +
+    '' +
+    '' +
+    '    <div class="row" style="margin: 10% 0% 0 0; overflow: hidden;">' +
+    '        <div id="bioPara2" class="col-sm-6">' +
+    '            <p class="textPara" style="background-color: white; box-sizing: border-box">One of my "not so secret" hobbies of mine is stock trading! I\'ve been trading for the past six years and using technical analysis. However, very recently I have been aggressively fiddling with statistical arbitrage strategies and their algorithms like Pair Trading. When I Realized the majority of daily trades are done by computer algorithms, I was baffled and mezmorized; this was what sparked my interest in persuing Computer Science.</p>' +
+    '        </div>' +
+    '' +
+    '        <div id="stockPic" class="col-sm-6" style="margin: 30% 0% 0 -4%">' +
+    '            <div class="wrapper">' +
+    '                <div class="inner">' +
+    '                    <figure> <img id="stockBack" src="../Pictures/stockBack.png" style="z-index:-1">' +
+    '                    </figure>' +
+    '                    <figure> <img id="stockMiddle" style="margin-top:-52%; z-index: 5000" src="../Pictures/stockMiddle.png">' +
+    '                    </figure>' +
+    '                    <figure> <img id="stockFront" style="margin-top:-52%" src="../Pictures/stockFront.png">' +
+    '                    </figure>' +
+    '                </div>' +
+    '            </div>' +
+    '        </div>' +
+    '    </div>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '    <br>' +
+    '' +
+    '' +
+    '' +
+    '' +
+    '' +
+    '    <div id="bioPara3" style="margin-top: -28.89%; padding: 0 1em 0 1em;">' +
+    '        <p class="textPara">I have been teaching myself CS since the Winter of 2015/2016. I started out with Python during which I built small text-based adventure games, and then moved on to HTML5, CSS, and JS for web development using <a class="textLink" href="https://www.freecodecamp.com/">freeCodeCamp</a>. Also, I used Python in building some of my Raspberry Pi projects. After completing my undergrad, I hope to get a Masters or PhD in a field in math or CS and go on and either work in software development or become a quant in New York.' +
+    '        </p>' +
+    '        <p class="textPara" style="margin: 20% 0 25% 0; font-size: 1.5em; line-height: 1.2em; color: #0058f1; text-align: left"><i>And the biggest thing I\'ve discovered so far is that there\'s more to being a programmer than just coding. The self-discovery, self-motivation, outside of the box thinking, and perseverance that a good programmer is required to have is what keeps bringing me back to the keyboard.</i></p>' +
+    '    </div>' +
+    '' +
+    '' +
+    '' +
+    '    <div id="bioSplitter" style="height: auto; margin-top: 0.8%">' +
+    '        <div id="bioPara4Wrapper">' +
+    '            <p class="textPara" id="bioPara4" style="font-size: 1.5em; line-height: 1.2em; max-width: 1000px"><i>Whether it be working on front-end, back-end, mobile, security, data engineering, or just having a conversation about what\'s going on in the global economic and political environment, the best thing I can do for myself is to work hard and progress with my colleagues!</i>' +
+    '            </p>' +
+    '        </div>' +
+    '    </div>' +
+    '</body>';
