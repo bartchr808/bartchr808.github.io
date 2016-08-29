@@ -593,7 +593,7 @@ li {
 }
 
 .fixedShellText {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: -0.1%;
 }
 
@@ -1030,6 +1030,14 @@ transform: rotateY(30deg);
     width: 300px;
     height: 300px;
     overflow: auto;
+}
+
+.projText h4 {
+    font-size: 1.2em
+}
+
+.projText ul {
+    font-size: 0.5em
 }
 
 #projBack1 {
