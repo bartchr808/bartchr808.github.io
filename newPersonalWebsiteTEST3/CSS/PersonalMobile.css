@@ -594,6 +594,8 @@ li {
 
 .fixedShellText {
     font-size: 1.3em;
+    font-weight: 600;
+    opacity: 1;
     margin-bottom: -0.1%;
 }
 
