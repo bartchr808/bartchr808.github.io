@@ -143,7 +143,7 @@ if ('addEventListener' in document) {
 }
 
 function navColorChange() {
-    //    $("#skills, #skillsButton").css("color", "black");
+    $("#skills, #skillsButton").css("color", "black");
     $("#logo").css("-webkit-filter", "grayscale(0%)");
     $("#logo").css("filter", "grayscale(0%)");
     $("#homeButton").css("color", "#0058f1");
