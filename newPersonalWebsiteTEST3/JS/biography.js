@@ -426,7 +426,7 @@ $(document).ready(function () {
         //        };
 
 
-        if ($(window).scrollTop() > 1600 && $(window).width() <= 767) {
+        if ($(window).scrollTop() > 1500 && $(window).width() <= 767) {
             //            $("#stockPic").removeClass("animated fadeOutLeftBig");
             //            $("#stockPic").addClass("animated fadeInLeftBig");
             //            $("#stockPic").fadeIn();
@@ -437,7 +437,7 @@ $(document).ready(function () {
             //            $("#bioPara2").css("opacity", 1);
             $(".wrapper").addClass("expand");
             //            $("#bioPara3").css("padding-top", "0%");
-        } else if ($(window).scrollTop() < 1600 && $(window).width() <= 767) {
+        } else if ($(window).scrollTop() < 1500 && $(window).width() <= 767) {
             //            $("#stockPic").removeClass("animated fadeInLeftBig");
             //            $("#stockPic").addClass("animated fadeOutLeftBig");
             //            $("#stockPic").fadeOut();
@@ -518,25 +518,25 @@ var bioTextD = '    <!--Header-->' +
     '' +
     '' +
     '    <div style="margin: 10% 0 0 0" class="row">' +
-    '        <div id="bioPara1" class="col-sm-7">' +
+    '        <div id="bioPara1" class="col-sm-7" style="padding: 0% 0 0 13%">' +
     '            <p style="float:right" class="textPara">' +
-    '                <h1 id="bioTitle" style="padding: 20% 0 0 0%; float:right">About Myself</h1>' +
-    '                <span class="textPara" id="actualBioPara1" style="float:right">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</span></p>' +
+    '                <h1 id="bioTitle" style="padding: 20% 0 0 0%; float:right; margin-right: 10%">About Myself</h1>' +
+    '                <span class="textPara" id="actualBioPara1" style="float:right; margin-right: 10%">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</span></p>' +
     '        </div>' +
     '' +
     '' +
     '        <!--' +
     '    <div style="margin: 10% 0 0 0" class="row">' +
     '        <div id="bioPara1" class="col-sm-7">' +
-    '            <div id="bioTitle" style="padding: 14% 0 0 0%">' +
+    '            <div id="bioTitle" style="padding: 14% 0 0 0%; margin-right: 10%">' +
     '                <h1>About Myself</h1>' +
     '            </div>' +
-    '            <p style="float:right" class="textPara" id="actualBioPara1">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</p>' +
+    '            <p style="float:right" class="textPara" id="actualBioPara1" style="margin-right: 10%">My (full) name is <b>Bartlomiej Jozef Chrzaszcz</b>. Before I was born, my family decided to move to the US. I was born in Chicago Illinois and then moved to Burlington Ontario. Currently I am a First Year CS student and the University of Waterloo with an intention of joint majoring in Mathematical Finance.</p>' +
     '            </span>' +
     '        </div>' +
     '-->' +
     '' +
-    '        <div class="col-sm-5" id="profilePic" style="margin: 0% 0 0 0">' +
+    '        <div class="col-sm-5" id="profilePic" style="margin: 5.35% 0px 0px; padding: 0 35% 0 0%">' +
     '            <img id="actualProfilePic" src="../Pictures/bodyShot.png" class="imgCenter">' +
     '        </div>' +
     '' +
@@ -664,7 +664,7 @@ var bioTextM = '    <!--Header-->' +
     '            <p class="textPara" style="background-color: white; box-sizing: border-box">One of my "not so secret" hobbies of mine is stock trading! I\'ve been trading for the past six years and using technical analysis. However, very recently I have been aggressively fiddling with statistical arbitrage strategies and their algorithms like Pair Trading. When I Realized the majority of daily trades are done by computer algorithms, I was baffled and mezmorized; this was what sparked my interest in persuing Computer Science.</p>' +
     '        </div>' +
     '' +
-    '        <div id="stockPic" class="col-sm-6" style="margin: 30% 0% 0 -4%">' +
+    '        <div id="stockPic" class="col-sm-6" style="margin: 30% 0% 0% -4%">' +
     '            <div class="wrapper">' +
     '                <div class="inner">' +
     '                    <figure> <img id="stockBack" src="../Pictures/stockBack.png" style="z-index:-1">' +
@@ -693,7 +693,7 @@ var bioTextM = '    <!--Header-->' +
     '' +
     '' +
     '' +
-    '    <div id="bioPara3" style="margin-top: -28.89%; padding: 0 1em 0 1em;">' +
+    '    <div id="bioPara3" style="margin-top: -45%; padding: 0 1em 0 1em;">' +
     '        <p class="textPara">I have been teaching myself CS since the Winter of 2015/2016. I started out with Python during which I built small text-based adventure games, and then moved on to HTML5, CSS, and JS for web development using <a class="textLink" href="https://www.freecodecamp.com/">freeCodeCamp</a>. Also, I used Python in building some of my Raspberry Pi projects. After completing my undergrad, I hope to get a Masters or PhD in a field in math or CS and go on and either work in software development or become a quant in New York.' +
     '        </p>' +
     '        <p class="textPara" style="margin: 20% 0 25% 0; font-size: 1.5em; line-height: 1.2em; color: #0058f1; text-align: left"><i>And the biggest thing I\'ve discovered so far is that there\'s more to being a programmer than just coding. The self-discovery, self-motivation, outside of the box thinking, and perseverance that a good programmer is required to have is what keeps bringing me back to the keyboard.</i></p>' +

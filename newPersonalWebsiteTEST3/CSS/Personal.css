@@ -682,15 +682,17 @@ body {
 }
 
 #bioPara1 {
-    /*
-    float: left;
-    margin: 0 0 0 10%;
-    padding: 7% 0 0 10%;
-    width: 600px;
-    height: 500px;
-            border: 1px solid blue;
-    box-sizing: border-box;
-*/
+    /*    float: left;*/
+    /*    margin: 0 0 0 10%;*/
+    padding: 0% 0 0 13%;
+    /*    width: 600px;*/
+    /*    height: 500px;*/
+    /*            border: 1px solid blue;*/
+    /*    box-sizing: border-box;*/
+}
+
+#profilePic {
+    padding: 0 35% 0 0%
 }
 
 #test {
