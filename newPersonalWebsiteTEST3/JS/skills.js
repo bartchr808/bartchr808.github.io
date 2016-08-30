@@ -126,6 +126,9 @@ if ('addEventListener' in document) {
 }
 
 function navColorChange() {
+    $("#logo").css("-webkit-filter", "grayscale(100%)");
+    $("#logo").css("filter", "grayscale(100%)");
+    $("#homeButton").css("color", "black");
     $(function () {
         $('#projects, #projectsButton').hover(function () {
                 $("#projects, #projectsButton").css("color", "#0058f1");

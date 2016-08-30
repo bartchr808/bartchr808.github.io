@@ -143,45 +143,61 @@ if ('addEventListener' in document) {
 }
 
 function navColorChange() {
+    //    $("#skills, #skillsButton").css("color", "black");
+    $("#logo").css("-webkit-filter", "grayscale(0%)");
+    $("#logo").css("filter", "grayscale(0%)");
+    $("#homeButton").css("color", "#0058f1");
     $(function () {
         $('#projects, #projectsButton').hover(function () {
                 $("#projects, #projectsButton").css("color", "#0058f1");
-                $("#skills, #skillsButton").css("color", "black");
-            },
-            function () {
-                $("#projects, #projectsButton").css("color", "black");
-                $("#skills, #skillsButton").css("color", "#0058f1");
-            });
-
-        $('#logo, #homeButton').hover(function () {
-                $("#logo").css("-webkit-filter", "grayscale(0%)");
-                $("#logo").css("filter", "grayscale(0%)");
-                $("#homeButton").css("color", "#0058f1");
-                $("#skills, #skillsButton").css("color", "black");
-            },
-            function () {
                 $("#logo").css("-webkit-filter", "grayscale(100%)");
                 $("#logo").css("filter", "grayscale(100%)");
                 $("#homeButton").css("color", "black");
+            },
+            function () {
+                $("#projects, #projectsButton").css("color", "black");
+                $("#logo").css("-webkit-filter", "grayscale(0%)");
+                $("#logo").css("filter", "grayscale(0%)");
+                $("#homeButton").css("color", "#0058f1");
+            });
+
+        $('#skills, #skillsButton').hover(function () {
                 $("#skills, #skillsButton").css("color", "#0058f1");
+                $("#logo").css("-webkit-filter", "grayscale(100%)");
+                $("#logo").css("filter", "grayscale(100%)");
+                $("#homeButton").css("color", "black");
+            },
+            function () {
+                $("#skills, #skillsButton").css("color", "black");
+                $("#logo").css("-webkit-filter", "grayscale(0%)");
+                $("#logo").css("filter", "grayscale(0%)");
+                $("#homeButton").css("color", "#0058f1");
             });
 
         $('#bio, #bioButton').hover(function () {
                 $("#bio, #bioButton").css("color", "#0058f1");
-                $("#skills, #skillsButton").css("color", "black");
+                $("#logo").css("-webkit-filter", "grayscale(100%)");
+                $("#logo").css("filter", "grayscale(100%)");
+                $("#homeButton").css("color", "black");
             },
             function () {
                 $("#bio, #bioButton").css("color", "black");
-                $("#skills, #skillsButton").css("color", "#0058f1");
+                $("#logo").css("-webkit-filter", "grayscale(0%)");
+                $("#logo").css("filter", "grayscale(0%)");
+                $("#homeButton").css("color", "#0058f1");
             });
 
         $('#contact, #contactButton').hover(function () {
                 $("#contact, #contactButton").css("color", "#0058f1");
-                $("#skills, #skillsButton").css("color", "black");
+                $("#logo").css("-webkit-filter", "grayscale(100%)");
+                $("#logo").css("filter", "grayscale(100%)");
+                $("#homeButton").css("color", "black");
             },
             function () {
                 $("#contact, #contactButton").css("color", "black");
-                $("#skills, #skillsButton").css("color", "#0058f1");
+                $("#logo").css("-webkit-filter", "grayscale(0%)");
+                $("#logo").css("filter", "grayscale(0%)");
+                $("#homeButton").css("color", "#0058f1");
             });
         //    $('#skillsButton').hover(function () {
         //            $("#skillsButton").css("color", "#0058f1");
@@ -337,52 +353,61 @@ function instRemoveLoader() {
 
 
 
-$(function () {
-    $('#bio').hover(function () {
-            $("#bio").css("color", "#0058f1");
-            $("#logo").css("-webkit-filter", "grayscale(100%)");
-            $("#logo").css("filter", "grayscale(100%)");
-        },
-        function () {
-            $("#bio").css("color", "black");
-            $("#logo").css("-webkit-filter", "grayscale(0%)");
-            $("#logo").css("filter", "grayscale(0%)");
-        });
-
-    $('#skills').hover(function () {
-            $("#skills").css("color", "#0058f1");
-            $("#logo").css("-webkit-filter", "grayscale(100%)");
-            $("#logo").css("filter", "grayscale(100%)");
-        },
-        function () {
-            $("#skills").css("color", "black");
-            $("#logo").css("-webkit-filter", "grayscale(0%)");
-            $("#logo").css("filter", "grayscale(0%)");
-        });
-
-    $('#projects').hover(function () {
-            $("#projects").css("color", "#0058f1");
-            $("#logo").css("-webkit-filter", "grayscale(100%)");
-            $("#logo").css("filter", "grayscale(100%)");
-        },
-        function () {
-            $("#projects").css("color", "black");
-            $("#logo").css("-webkit-filter", "grayscale(0%)");
-            $("#logo").css("filter", "grayscale(0%)");
-        });
-
-    $('#contact').hover(function () {
-            $("#contact").css("color", "#0058f1");
-            $("#logo").css("-webkit-filter", "grayscale(100%)");
-            $("#logo").css("filter", "grayscale(100%)");
-        },
-        function () {
-            $("#contact").css("color", "black");
-            $("#logo").css("-webkit-filter", "grayscale(0%)");
-            $("#logo").css("filter", "grayscale(0%)");
-        });
-});
-
+//function navColorChange() {
+//    $(function () {
+//        $('#projects, #projectsButton').hover(function () {
+//                $("#projects, #projectsButton").css("color", "#0058f1");
+//                $("#logo").css("-webkit-filter", "grayscale(100%)");
+//                $("#logo").css("filter", "grayscale(100%)");
+//                $("#homeButton").css("color", "black");
+//            },
+//            function () {
+//                $("#projects, #projectsButton").css("color", "black");
+//                $("#logo").css("-webkit-filter", "grayscale(0%)");
+//                $("#logo").css("filter", "grayscale(0%)");
+//                $("#homeButton").css("color", "#0058f1");
+//            });
+//
+//        $('#skills, #skillsButton').hover(function () {
+//                $("#skills, #skillsButton").css("color", "#0058f1");
+//                $("#logo").css("-webkit-filter", "grayscale(100%)");
+//                $("#logo").css("filter", "grayscale(100%)");
+//                $("#homeButton").css("color", "black");
+//            },
+//            function () {
+//                $("#skills, #skillsButton").css("color", "black");
+//                $("#logo").css("-webkit-filter", "grayscale(0%)");
+//                $("#logo").css("filter", "grayscale(0%)");
+//                $("#homeButton").css("color", "#0058f1");
+//            });
+//
+//        $('#bio, #bioButton').hover(function () {
+//                $("#bio, #bioButton").css("color", "#0058f1");
+//                $("#logo").css("-webkit-filter", "grayscale(100%)");
+//                $("#logo").css("filter", "grayscale(100%)");
+//                $("#homeButton").css("color", "black");
+//            },
+//            function () {
+//                $("#bio, #bioButton").css("color", "black");
+//                $("#logo").css("-webkit-filter", "grayscale(0%)");
+//                $("#logo").css("filter", "grayscale(0%)");
+//                $("#homeButton").css("color", "#0058f1");
+//            });
+//
+//        $('#contact, #contactButton').hover(function () {
+//                $("#contact, #contactButton").css("color", "#0058f1");
+//                $("#logo").css("-webkit-filter", "grayscale(100%)");
+//                $("#logo").css("filter", "grayscale(100%)");
+//                $("#homeButton").css("color", "black");
+//            },
+//            function () {
+//                $("#contact, #contactButton").css("color", "black");
+//                $("#logo").css("-webkit-filter", "grayscale(0%)");
+//                $("#logo").css("filter", "grayscale(0%)");
+//                $("#homeButton").css("color", "#0058f1");
+//            });
+//    });
+//}
 
 
 

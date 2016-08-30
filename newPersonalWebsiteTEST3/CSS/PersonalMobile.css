@@ -214,6 +214,12 @@ li {
     filter: grayscale(100%);
 }
 
+.homeLogo {
+    -webkit-filter: grayscale(0%) !important;
+    /* Chrome, Safari, Opera */
+    filter: grayscale(0%) !important;
+}
+
 .contactLinks {
     color: white;
     cursor: auto;

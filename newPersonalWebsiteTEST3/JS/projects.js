@@ -141,6 +141,9 @@ function projTileClick(bool) {
 
 
 function navColorChange() {
+    $("#logo").css("-webkit-filter", "grayscale(100%)");
+    $("#logo").css("filter", "grayscale(100%)");
+    $("#homeButton").css("color", "black");
     $(function () {
         $('#skills, #skillsButton').hover(function () {
                 $("#skills, #skillsButton").css("color", "#0058f1");

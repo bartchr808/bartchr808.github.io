@@ -60,9 +60,9 @@ li {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    -webkit-filter: grayscale(100%);
+    /*    -webkit-filter: grayscale(100%);*/
     /* Chrome, Safari, Opera */
-    filter: grayscale(100%);
+    /*    filter: grayscale(100%);*/
 }
 
 .contactLinks {
